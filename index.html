@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troll Page</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body {
+      background: url('troll.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="lol.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <script>
+    // Ensure audio starts fast on iOS devices
+    document.addEventListener('click', () => {
+      const audio = document.querySelector('audio');
+      if (audio.paused) audio.play();
+    });
+  </script>
+</body>
+</html>
